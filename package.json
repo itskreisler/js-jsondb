@@ -1,0 +1,33 @@
+{
+  "name": "@kreisler/js-jsondb",
+  "version": "1.0.6",
+  "description": "A javascript Class that reads JSON file as a database.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "min": "node min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itskreisler/js-jsondb.git"
+  },
+  "homepage": "https://github.com/itskreisler/js-jsondb.git",
+  "keywords": [
+    "js-json-db",
+    "js-db",
+    "json-db",
+    "json-database",
+    "sample",
+    "db",
+    "js",
+    "json",
+    "database"
+  ],
+  "author": "itskreisler",
+  "license": "ISC",
+  "devDependencies": {
+    "minify": "^9.1.0",
+    "nodemon": "^2.0.20"
+  }
+}
