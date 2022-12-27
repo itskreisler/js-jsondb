@@ -15,7 +15,7 @@ npm i @kreisler/js-jsondb
 ```js
 import JsonDb from "@kreisler/js-jsondb";
 // Crea una instancia de la clase JsonDb y especifica la ruta de la carpeta
-const json_db = new JsonDb("json_files"); // Or passing the directory of your json files with no trailing slash, default is the current directory. E.g.  new JSONDB( '/var/www/html/json_files' )
+const json_db = new JsonDb("json_files"); // Or passing the directory of your json files with no trailing slash, default is the current directory. E.g.  new JsonDb( '/var/www/html/json_files' )
 ```
 
 #### Inserting
@@ -26,6 +26,16 @@ Insert into your new JSON file. Using _users.json_ as example here
 json_db.insert("users", { id: 1, name: "Juan" });
 json_db.insert("users", { id: 2, name: "Ana" });
 json_db.insert("users", { id: 3, name: "Mario" });
+```
+
+or
+
+```js
+json_db.insert("users", [
+  { id: 1, name: "Juan" },
+  { id: 2, name: "Ana" },
+  { id: 3, name: "Mario" },
+]);
 ```
 
 #### Get
@@ -91,6 +101,25 @@ json_db.update("users", (element) => element.id === 1, {
 */
 ```
 
+or
+
+```js
+json_db.update(
+  "users",
+  (element) => element.id > 1,
+  (element) => ({
+    name: `${element.name} :)`,
+  })
+);
+/*
+[
+  { "id": 1, "name": "Juan" },
+  { "id": 2, "name": "Ana :)" },
+  { "id": 3, "name": "Mario :)" }
+]
+*/
+```
+
 All rows in the JSON file can also be modified
 
 ```js
@@ -118,7 +147,7 @@ json_db.delete("users", ({ name }) => name.startsWith("J"));
 */
 ```
 
-Delete file
+Delete file:
 
 ```js
 json_db.delete("users");

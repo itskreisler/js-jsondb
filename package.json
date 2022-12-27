@@ -1,8 +1,8 @@
 {
   "name": "@kreisler/js-jsondb",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A javascript Class that reads JSON file as a database.",
-  "main": "index.js",
+  "main": "index.min.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
