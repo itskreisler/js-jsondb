@@ -14,6 +14,12 @@ npm i @kreisler/js-jsondb
 
 ```js
 import JsonDb from "@kreisler/js-jsondb";
+```
+or
+```js
+const JsonDb = require("@kreisler/js-jsondb");
+```
+```js	
 // Crea una instancia de la clase JsonDb y especifica la ruta de la carpeta
 const json_db = new JsonDb("json_files"); // Or passing the directory of your json files with no trailing slash, default is the current directory. E.g.  new JsonDb( '/var/www/html/json_files' )
 ```

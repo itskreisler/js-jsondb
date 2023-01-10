@@ -1,6 +1,6 @@
 {
   "name": "@kreisler/js-jsondb",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "A javascript Class that reads JSON file as a database.",
   "main": "./lib",
   "scripts": {
