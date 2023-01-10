@@ -37,6 +37,9 @@ class JsonDb {
    * @returns The file name with the extension .json
    */
   #getFileName(fileName) {
+    if (typeof fileName !== "string") {
+      throw new Error("El nombre del archivo debe ser una cadena!")
+    }
     if (!fileName.endsWith(".json")) {
       fileName += ".json";
     }
@@ -135,4 +138,4 @@ class JsonDb {
     }
   }
 }
-export default JsonDb
+module.exports = JsonDb

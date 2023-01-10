@@ -8,7 +8,7 @@ const options = {
   },
 };
 
-const [error, data] = await tryToCatch(minify, "./index.js", options);
+const [error, data] = await tryToCatch(minify, "./lib/index.js", options);
 
 if (error) console.error(error.message);
 fs.writeFileSync("index.min.js", data);
