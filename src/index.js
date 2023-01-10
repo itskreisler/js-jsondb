@@ -1,7 +1,7 @@
 import fs from "fs";
 
 /* It's a class that allows you to create a database using JSON files */
-export default class JsonDb {
+class JsonDb {
   #folderPath;
   /**
    * If the folder doesn't exist, create it.
@@ -135,3 +135,4 @@ export default class JsonDb {
     }
   }
 }
+export default JsonDb

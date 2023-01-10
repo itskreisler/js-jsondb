@@ -23,4 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.test.cjs
+*.test.mjs
+*.test.js
 *.env
